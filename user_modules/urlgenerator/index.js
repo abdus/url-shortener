@@ -3,7 +3,7 @@
 
 let randWord = "", randNum, num2char;
 
-const urlGen = () => {
+module.exports = () => {
     for (let i=0; i<3; i++) {
         randNum = Math.floor(Math.random() * (90 - 65 + 1)) + 65;
         num2char = String.fromCharCode(randNum);
@@ -14,5 +14,3 @@ const urlGen = () => {
     }
     return randWord;
 }
-
-module.exports = urlGen;
