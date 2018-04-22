@@ -1,17 +1,16 @@
 {
   "name": "url-shorten",
   "version": "1.0.0",
-  "description": "A basic URL shortener I am building to practice my skills.",
+  "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js",
     "test": "nodemon app.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/thisisabdus/url-shorten.git"
   },
-  "author": "Abdus",
+  "author": "abdus",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/thisisabdus/url-shorten/issues"
@@ -20,9 +19,7 @@
   "dependencies": {
     "body-parser": "^1.18.2",
     "express": "^4.16.3",
-    "mongodb": "^3.0.7"
-  },
-  "devDependencies": {
-    "nodemon": "^1.17.3"
+    "mongoose": "^5.0.15",
+    "pug": "^2.0.3"
   }
 }
