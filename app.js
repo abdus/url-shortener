@@ -1,9 +1,21 @@
 const app = require('express')();
 const pug = require('pug')
+const PORT = process.env.PORT || 3000
 
+
+//routes 
+const homeRoute = require('./routes/home.js')
+
+
+//view engine setup
 app.set('view engine', 'pug');
-app.get('/', (req, res) => {
-    res.render('index');
-});
 
-app.listen(3000);
+
+//using routes 
+app.use('/', homeRoute);
+
+
+// port
+app.listen(PORT, () => {
+    console.log('Listening to ', PORT);
+});
