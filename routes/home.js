@@ -1,8 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const bodyParser = require('body-parser');
-const mongoCli = require('mongodb').MongoClient;
-const dbURL = 'mongodb://localhost/db-url'
+const addData2DB = require('/home/abdus/Desktop/url-shorten/db/add.js')
 
 // middleware 
 router.use(bodyParser.urlencoded({ extended: false}));
@@ -21,20 +20,8 @@ router.post('/', (req, res) => {
     userData['userName'] = req.body.username;
     userData['userEmail'] = req.body.useremail;
 
-    mongoCli.connect(dbURL, (err, cli) => {
-        if (err) throw err;
-
-        let dbURLCol = cli.db('db-url').collection('urls');
-        let dbUserCol = cli.db('db-url').collection('users');
-        
-        dbURLCol.insertOne(urlData, (err) => {
-            if (err) throw err;
-        });
-
-        dbUserCol.insertOne(userData, (err) => {
-            if (err) throw err;
-        })
-    })
+    //add to DB 
+    addData2DB(urlData, userData);
 
     res.end();
 })
