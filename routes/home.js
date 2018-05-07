@@ -1,28 +1,41 @@
 const express = require('express');
-const router = express.Router();
 const bodyParser = require('body-parser');
-const addData2DB = require('/home/abdus/Desktop/url-shorten/db/add.js')
+const Router = express.Router();
 
-// middleware 
-router.use(bodyParser.urlencoded({ extended: false}));
 
-router.get('/', (req, res) => {
+const urlModel = require('/home/abdus/Desktop/url-shorten/db/models/url_schema.js');
+const randURL = require('/home/abdus/Desktop/url-shorten/rand_word/index.js');
+
+// body-parser 
+Router.use(bodyParser.urlencoded({ extended: false }));
+
+// get req in '/'
+Router.get('/', (req, res) => {
     res.render('index');
+    // console.log(req.query);
+    res.end();
 });
 
-// Env variable for user data 
-let urlData = {}, userData = {}, shortURL = "RfYgEt";
-router.post('/', (req, res) => {
+// post req in '/'
+Router.post('/', (req, res) => {
+   
+    //Checking and adding to db
+    let shortURL = randURL();
+    let data = new urlModel({
+        "userURL": req.body.url2shorten,
+        "shortURL": shortURL,
+        "userEmail": req.body.useremail,
+        "userName": req.body.username
+    })
+    let url2send = 'localhost:4000/' + shortURL;
+    data.save((err) => {
+        if (err) throw err;
+        console.log("Saved")
+    })
 
-    urlData['userURL'] = req.body.url2shorten;
-    urlData['shortURL'] = shortURL;
-
-    userData['userName'] = req.body.username;
-    userData['userEmail'] = req.body.useremail;
-
-    //add to DB 
-    addData2DB(urlData, userData);
-
+    res.render("shorted", {"url": url2send});
     res.end();
 })
-module.exports = router;
+
+
+module.exports = Router;

@@ -35,3 +35,14 @@ form input {
 form input::-moz-placeholder{
     color: rgb(245, 35, 63);
 }
+footer {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 0;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+footer a {
+    text-decoration: none;  
+}
