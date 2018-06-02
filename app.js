@@ -5,7 +5,7 @@ const PORT = process.env.PORT || 4000
 
 //routes 
 const homeRoute = require('./routes/home.js');
-const shortURLs = require('./routes/shorturl.js');
+const shorturls = require('./routes/shorturls.js');
 
 
 //view engine setup
@@ -13,8 +13,12 @@ app.set('view engine', 'pug');
 
 
 //using routes 
+app.all('/shorturls', (req, res) => {
+    res.render("shorturls");
+})
+// app.use('/shorturls', shorturls)
 app.use('/', homeRoute);
-app.use('/shorturls', shortURLs);
+
 
 
 

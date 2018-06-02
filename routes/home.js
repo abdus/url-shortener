@@ -10,14 +10,15 @@ const randURL = require('/home/abdus/Desktop/url-shorten/rand_word/index.js');
 Router.use(bodyParser.urlencoded({ extended: false }));
 
 // get req in '/'
-Router.get('/', (req, res) => {
+Router.get('/', (req, res, next) => {
     res.render('index');
     // console.log(req.query);
     res.end();
+    next();
 });
 
 // post req in '/'
-Router.post('/', (req, res) => {
+Router.post('/', (req, res, next) => {
    
     //Checking and adding to db
     let shortURL = randURL();
@@ -35,6 +36,7 @@ Router.post('/', (req, res) => {
 
     res.render("shorted", {"url": url2send});
     res.end();
+    next();
 })
 
 
