@@ -1,28 +1,17 @@
 {
   "name": "url-shorten",
-  "version": "1.0.0",
-  "description": "A basic URL-shorten app to practice my skills.",
-  "main": "app.js",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "test": "nodemon app.js"
+    "start": "node ./bin/www"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/thisisabdus/url-shorten.git"
-  },
-  "author": "abdus",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/thisisabdus/url-shorten/issues"
-  },
-  "homepage": "https://github.com/thisisabdus/url-shorten#readme",
   "dependencies": {
-    "body-parser": "^1.18.2",
-    "express": "^4.16.3",
-    "mongoose": "^5.0.16",
-    "pug": "^2.0.3"
-  },
-  "devDependencies": {
-    "html2pug": "^2.0.1"
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "express": "~4.16.0",
+    "express-handlebars": "^3.0.0",
+    "hbs": "~4.0.1",
+    "http-errors": "~1.6.2",
+    "morgan": "~1.9.0"
   }
 }
