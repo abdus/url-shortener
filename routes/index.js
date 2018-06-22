@@ -1,14 +1,12 @@
 var express = require('express');
 var router = express.Router();
-var cors = require('cors');
 
 var urlSchema = require('../db/url');
 var randWord = require('../rand_word/index')();
 
 /* GET home page. */
-router.get('/', cors(), function(req, res, next) {
-  // res.render('index', { title: 'Express' });
-  res.send(200);
+router.get('/', function(req, res, next) {
+  res.render('index', { title: 'Express' });
 });
 
 /* POST home page. */
