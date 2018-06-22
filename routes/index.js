@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 var urlSchema = require('../db/url');
-var randWord = require('../rand_word/index');
+var randWord = require('../rand_word/index')();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -10,19 +10,15 @@ router.get('/', function(req, res, next) {
 });
 
 /* POST home page. */
-let data2pass = null;
 router.post('/', (req, res) => {
-  let shortURL = randWord();
-  console.log(isAvailable(shortURL));
-  res.render('index', {data: req.body.urlLONG});
+  let urlData = new urlSchema({
+    longURL: req.body.urlLONG,
+    shortURL: randWord
+  });
+  urlData.save((err, data) => {
+    if (err) throw err;
+    return res.render('index', {data: 'Your shortlink has been created. You can find it here: https://localhost:3000/' + randWord })
+  });
 });
 
 module.exports = router;
-
-
-const isAvailable = (shortURL) => {
-  urlSchema.findOne({'urlSHORT': shortURL})
-    .exec((err,data) => {
-    return data;
-  });
-};
