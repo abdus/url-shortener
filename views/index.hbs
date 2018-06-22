@@ -1,11 +1,18 @@
 <div id="indexpage">
-    <form action="/short" method="post">
+    <form action="/" method="post">
         <div class="input-field col s6">
-          <input id="last_name" type="text" class="validate">
+          <input id="last_name" type="text" class="validate" name="urlLONG">
           <label for="last_name">URL to Shorten</label>
-          <button class="waves-effect waves-dark btn" type="submit">Short Now</button>
+          <button class="waves-effect waves-dark btn btn-black" type="submit">Short Now</button>
         </div>
     </form>
+    <div id="responseFromServer">
+        {{#each data}}
+            <div>
+                <span>{{ this }}</span>
+            </div>
+        {{/each}}
+    </div>
     
     
     <button id="plus_x_button" class="btn-floating btn-large waves-effect waves-light red"><i class="fa fa-plus" aria-hidden="true"></i></button>

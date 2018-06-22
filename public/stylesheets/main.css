@@ -9,6 +9,12 @@ a {
 .mobile {
     display: none;
 }
+.btn-black {
+    background: black;
+}
+.btn-black:hover {
+    background: rgba(0, 0, 0, 0.774);
+}
 #navpage {
     min-height: 10vh;
     padding: 10px;
@@ -33,18 +39,19 @@ a {
     z-index: 2;
 }
 #indexpage #viewonclicknav {
-    display: none;
     position: fixed;
     height: 100vh;
     width: 100%;
-    top: 0;
+    bottom: -1000px;
     padding: 30vh 0;
     font-size: 3em;
     text-align: center;
-    background: rgba(0, 0, 0, 0.781);
     color: white;
+    background: rgba(0, 0, 0, 0.733);
     z-index: 1;
-    animation: hideAnime 1s ease forwards;
+    /* animation: hideAnime .5s ease forwards; */
+    overflow: hidden;
+    transition: .5s ease all;
 }
 #footerpage {
     text-align: center;
@@ -56,16 +63,5 @@ a {
     }
     .mobile {
         display: block;
-    }
-}
-
-@keyframes hideAnime {
-    from {
-        opacity: 0;
-        background: rgba(0, 0, 0, 0);
-    }
-    to {
-        background: rgba(0, 0, 0, 0.936);
-        opacity: 1;
     }
 }
