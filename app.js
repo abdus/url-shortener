@@ -5,7 +5,6 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var exphbs = require('express-handlebars');
 var bodyParser = require('body-parser');
-var cors = require('cors');
 
 var indexRouter = require('./routes/index');
 
@@ -15,7 +14,6 @@ var app = express();
 app.engine('hbs', exphbs({defaultLayout: 'layout', extname: '.hbs'}));
 app.set('view engine', 'hbs');
 
-app.use(cors());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 app.use(logger('dev'));
