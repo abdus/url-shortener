@@ -39,7 +39,6 @@ a {
     z-index: 2;
 }
 #indexpage #viewonclicknav {
-    text-decoration: underline;
     position: fixed;
     height: 100vh;
     width: 100%;
@@ -50,9 +49,12 @@ a {
     color: white;
     background: rgba(0, 0, 0, 0.733);
     z-index: 1;
-    /* animation: hideAnime .5s ease forwards; */
     overflow: hidden;
     transition: .5s ease all;
+}
+#viewonclicknav a {
+    color: white;
+    border-bottom: 5px double white;
 }
 #footerpage {
     text-align: center;
