@@ -39,6 +39,7 @@ a {
     z-index: 2;
 }
 #indexpage #viewonclicknav {
+    text-decoration: underline;
     position: fixed;
     height: 100vh;
     width: 100%;
