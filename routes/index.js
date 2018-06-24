@@ -22,6 +22,15 @@ router.post('/', (req, res) => {
   });
 });
 
+/*  GET about page */
+router.get('/about', (req, res) => {
+  return res.render('about');
+});
+
+/*  GET contribute page */
+router.get('/contribute', (req, res) => {
+  return res.render('contribute');
+});
 
 
 module.exports = router;

@@ -42,6 +42,13 @@ a {
 .center {
     text-align: center;
 }
+#errorpage {
+    text-align: center;
+}
+#errorpage h1 {
+    min-height: 60vh;
+    line-height: 60vh;
+}
 #navpage {
     min-height: 10vh;
     padding: 10px;
@@ -74,6 +81,9 @@ a {
 }
 #short-urls_page table tr, td, th {
     border: 1px solid rgb(201, 196, 196);
+}
+#aboutpage, #contribute {
+    min-height: 60vh;
 }
 #footerpage {
     text-align: center;
