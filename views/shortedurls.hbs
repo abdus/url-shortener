@@ -1,0 +1,15 @@
+<div id="short-urls_page">
+    <h3>Shorted URLs</h3>
+    <table>
+        <tr>
+            <th>Short URL</th>
+            <th>Original URL</th>
+        </tr>
+        {{#each data}}
+            <tr>
+                <td><a href="http://{{ this.shortURL }}">{{ this.shortURL }}</a></td>
+                <td><a href="http://{{ this.longURL }}">{{ this.longURL }}</a></td>
+            </tr>
+        {{/each}}
+    </table>
+</div>
