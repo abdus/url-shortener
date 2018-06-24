@@ -14,6 +14,30 @@ a {
 }
 .btn-black:hover {
     background: rgba(0, 0, 0, 0.774);
+}.btn-floating {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    margin: 10px;
+    z-index: 2;
+}
+#viewonclicknav {
+    position: fixed;
+    min-height: 100vh;
+    width: 100%;
+    bottom: -1000px;
+    padding: 30vh 0;
+    font-size: 2em;
+    text-align: center;
+    color: white;
+    background: rgba(0, 0, 0, 0.733);
+    z-index: 1;
+    /* overflow: hidden; */
+    transition: .5s ease all;
+}
+#viewonclicknav a {
+    color: white;
+    border-bottom: 5px double white;
 }
 #navpage {
     min-height: 10vh;
@@ -36,31 +60,6 @@ a {
 }
 #indexpage #responseFromServer {
     color: green;
-}
-#indexpage .btn-floating {
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    margin: 10px;
-    z-index: 2;
-}
-#indexpage #viewonclicknav {
-    position: fixed;
-    min-height: 100vh;
-    width: 100%;
-    bottom: -1000px;
-    padding: 30vh 0;
-    font-size: 2em;
-    text-align: center;
-    color: white;
-    background: rgba(0, 0, 0, 0.733);
-    z-index: 1;
-    /* overflow: hidden; */
-    transition: .5s ease all;
-}
-#viewonclicknav a {
-    color: white;
-    border-bottom: 5px double white;
 }
 #short-urls_page {
     min-height: 70vh;
