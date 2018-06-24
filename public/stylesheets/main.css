@@ -79,7 +79,6 @@ a {
 #indexpage #hiddenInputForData {
     height: 0;
     width: 0;
-    visibility: hidden;
 }
 #short-urls_page {
     min-height: 70vh;
