@@ -1,6 +1,5 @@
-body {
+body, * {
     margin: 0;
-    /* font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; */
 }
   
 a {
@@ -57,7 +56,7 @@ a {
     font-weight: 900;
 }
 #indexpage {
-    min-height: 80vh;
+    min-height: 70vh;
     text-align: center;
 }
 #indexpage .errorMessage {
@@ -83,10 +82,12 @@ a {
     border: 1px solid rgb(201, 196, 196);
 }
 #aboutpage, #contribute {
-    min-height: 60vh;
+    min-height: 75vh;
 }
 #footerpage {
     text-align: center;
+    padding: 10px 0;
+    margin-top: 30px;
 }
 
 @media screen and (max-width: 500px) {
