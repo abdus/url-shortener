@@ -39,6 +39,9 @@ a {
     color: white;
     border-bottom: 5px double white;
 }
+.center {
+    text-align: center;
+}
 #navpage {
     min-height: 10vh;
     padding: 10px;

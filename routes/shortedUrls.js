@@ -11,8 +11,8 @@ router.get('/', (req, res) => {
             urlArr[i] = {};
             urlArr[i].shortURL = req.hostname + '/' + data[i].shortURL;
             urlArr[i].longURL = data[i].longURL;
+            urlArr[i].slno = +i+1;
         }
-        console.log(urlArr);
         return res.render('shortedurls', {data: urlArr});
     });
 });
