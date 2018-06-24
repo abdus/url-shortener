@@ -1,1 +1,3 @@
-# Name says it all!
+# URL Shorten
+
+A simple, basic URL shortening app built with <a href="https://nodejs.org">Node JS</a>, <a href="https://expressjs.com/">Express JS</a> and <a href="https://mongodb.org">MongoDB</a> on back-end. And <a href="https://materializecss.com/">Materialize</a>, <a href="https://developer.mozilla.org/bm/docs/Web/JavaScript">Javascript</a> and <a href="https://handlebarsjs.com/">handlebars JS </a> for templating on front-end.

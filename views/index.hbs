@@ -1,13 +1,15 @@
 <div id="indexpage">
-    <form action="/" method="post">
+    <form action="/" method="post" id="shortUrlForm" onsubmit="return isValid()">
         <div class="errorMessage">{{ errorMsg }}</div>
         <div class="input-field col s6">
-          <input id="last_name" type="url" class="validate" name="urlLONG" placeholder="http://" required>
-          <label for="last_name">URL to Shorten</label>
-          <button class="waves-effect waves-dark btn btn-black" type="submit">Short Now</button>
+            <input id="longURL" type="url" class="validate" name="urlLONG" placeholder="http://" required>
+            <input type="hidden" name="_csrf" value="{{csrfToken}}">
+            <label for="last_name">URL to Shorten</label>
+            <button class="waves-effect waves-dark btn btn-black" type="submit">Short Now</button>
         </div>
     </form>
-    <div id="responseFromServer">
-        {{ data }}
-    </div>
+    <br><br>
+    <input type="text" id="hiddenInputForData" value="{{ data }}">
+    <span id="responseFromServer">{{ data }}</span><br>
+    <button class="waves-effect waves-dark btn btn-default center" id="copy-button" onclick="copyDivToClipboard()">Copy</button>
 </div>

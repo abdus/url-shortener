@@ -61,14 +61,25 @@ a {
 }
 #indexpage .errorMessage {
     color: orangered;
+    min-height: 30px;
 }
 #indexpage form {
     width: 30%;
     margin: auto;
-    padding-top: 25vh;
+    padding-top: 17vh;
 }
 #indexpage #responseFromServer {
+    text-align: center;
+    width: 80%;
+    margin: auto;
     color: green;
+    padding: 10px;
+    font-size: 1.2em;
+}
+#indexpage #hiddenInputForData {
+    height: 0;
+    width: 0;
+    visibility: hidden;
 }
 #short-urls_page {
     min-height: 70vh;
