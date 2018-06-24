@@ -1,7 +1,8 @@
 <div id="indexpage">
     <form action="/" method="post">
+        <div class="errorMessage">{{ errorMsg }}</div>
         <div class="input-field col s6">
-          <input id="last_name" type="text" class="validate" name="urlLONG">
+          <input id="last_name" type="text" class="validate" name="urlLONG" placeholder="http://" required>
           <label for="last_name">URL to Shorten</label>
           <button class="waves-effect waves-dark btn btn-black" type="submit">Short Now</button>
         </div>
@@ -18,9 +19,5 @@
         <a href="#">Shorted Links</a><br class="mobile">
         <a href="#">About</a><br class="mobile">
         <a href="#">Contribute</a>
-        <div>
-            <br><br><br>
-            Staying Awake Till Late Night Doesn't Mean That You Are Working Hard - Abdus :)
-        </div>
     </div>
 </div>

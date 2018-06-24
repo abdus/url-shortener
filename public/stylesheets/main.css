@@ -26,10 +26,16 @@ a {
     min-height: 80vh;
     text-align: center;
 }
+#indexpage .errorMessage {
+    color: orangered;
+}
 #indexpage form {
     width: 30%;
     margin: auto;
     padding-top: 25vh;
+}
+#indexpage #responseFromServer {
+    color: green;
 }
 #indexpage .btn-floating {
     position: absolute;
