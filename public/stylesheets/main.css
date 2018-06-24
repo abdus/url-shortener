@@ -63,6 +63,7 @@ a {
 }
 #short-urls_page {
     min-height: 70vh;
+    overflow-x: scroll;
 }
 #short-urls_page table, h3 {
     width: 90%;
