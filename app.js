@@ -1,21 +1,21 @@
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var exphbs = require('express-handlebars');
-var bodyParser = require('body-parser');
+const createError = require('http-errors');
+const express = require('express');
+const path = require('path');
+const cookieParser = require('cookie-parser');
+const exphbs = require('express-handlebars');
+const bodyParser = require('body-parser');
 
-var indexRouter = require('./routes/index');
-var shortedURLrouter = require('./routes/shortedUrls');
-var urlRedirectRouter = require('./routes/redirectURLS');
+const indexRouter = require('./routes/index');
+const shortedURLrouter = require('./routes/shortedUrls');
+const urlRedirectRouter = require('./routes/redirectURLS');
 
-var app = express();
+const app = express();
 
 // view engine setup
-app.engine('hbs', exphbs({defaultLayout: 'layout', extname: '.hbs'}));
+app.engine('hbs', exphbs({ defaultLayout: 'layout', extname: '.hbs' }));
 app.set('view engine', 'hbs');
 
-app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
